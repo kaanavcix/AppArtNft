@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:nftapp/core/components/avatar_comp.dart';
+import 'package:nftapp/core/components/card_nft.dart';
+import 'package:nftapp/core/components/card_text.dart';
+import 'package:nftapp/core/components/check_box.dart';
 import 'package:nftapp/core/components/search_bar.dart';
+import 'package:nftapp/core/components/tag.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -44,8 +49,13 @@ class HomeScreen extends StatelessWidget {
                 style: Get.textTheme.headline5?.copyWith(
                     fontWeight: FontWeight.bold, fontSize: 32,wordSpacing: 2),
               ),
-SearchBar()
-             
+SearchBar(),
+CardNft(),
+AvatarNft()    ,
+Tag(),
+TagsInfo(),
+CheckBoxs(),
+CardText(text: "First name",)         
             ],
           ),
         ),

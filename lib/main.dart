@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:nftapp/HomeScreen.dart';
+import 'package:nftapp/core/theme/dark_theme.dart';
+import 'package:nftapp/core/theme/light_theme.dart';
+import 'package:nftapp/home_screen.dart';
 
 void main() {
   
@@ -15,10 +17,8 @@ class NftApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       
-      theme: ThemeData.light().copyWith(
-          iconTheme: IconThemeData(color: Colors.black),
-          scaffoldBackgroundColor: Colors.white,
-          appBarTheme: AppBarTheme(color: Colors.white, elevation: 0)),
+      theme: lightTheme,
+      darkTheme: darkTheme,
       debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
